@@ -1,0 +1,40 @@
+# Rea Pay service catalog for the PQC risk model.
+# data_secrecy_years: how long this service's data must stay secret (Mosca's x).
+# exposure: public or internal.
+# upgrade_difficulty: low (1y effort), medium (3y), high (5y) (Mosca's y).
+# files: path fragments used to attribute scanner findings to a service.
+
+services:
+  ledger:
+    data_secrecy_years: 20
+    exposure: public
+    upgrade_difficulty: high
+    files:
+      - "ledger_service.py"
+  custody:
+    data_secrecy_years: 15
+    exposure: public
+    upgrade_difficulty: high
+    files:
+      - "custody_service.py"
+  stablecoin:
+    data_secrecy_years: 10
+    exposure: public
+    upgrade_difficulty: medium
+    files:
+      - "stablecoin_service.py"
+  platform:
+    data_secrecy_years: 7
+    exposure: internal
+    upgrade_difficulty: medium
+    files:
+      - "config.yaml"
+      - ".env.example"
+      - "Dockerfile"
+      - "server-rsa.crt"
+      - "main.tf"
+
+default:
+  data_secrecy_years: 7
+  exposure: internal
+  upgrade_difficulty: medium
