@@ -1,0 +1,4 @@
+# No external dependencies. Standard library only.
+#
+# scanner/pqc_scanner.py, scanner/risk_model.py, and
+# dashboard/generate_report.py all run on Python 3.8+ with no installs.
